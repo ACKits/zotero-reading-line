@@ -347,7 +347,7 @@ function startReadingLine(addon: any) {
     Zotero.debug("[ReadingLine] notifier error: " + e, 1);
   }
 
-  const prefObservers: Array<{ key: string; handler: () => void }> = [];
+  const prefObserverIDs: symbol[] = [];
   const prefKeys = [
     "lineStyle",
     "lineColor",
@@ -359,8 +359,10 @@ function startReadingLine(addon: any) {
     const fullKey = `${addon.data.config.prefsPrefix}.${k}`;
     const handler = () => reapplyAll(addon);
     try {
-      Zotero.Prefs.registerObserver(fullKey, handler, true);
-      prefObservers.push({ key: fullKey, handler });
+      const observerID = Zotero.Prefs.registerObserver(fullKey, handler, true);
+      if (observerID) {
+        prefObserverIDs.push(observerID);
+      }
       Zotero.debug("[ReadingLine] observer registered: " + fullKey, 1);
     } catch (e) {
       Zotero.debug("[ReadingLine] prefs observer error: " + e, 1);
@@ -381,9 +383,9 @@ function startReadingLine(addon: any) {
         Zotero.Notifier.unregisterObserver(notifierID);
       } catch (_) {}
     }
-    for (const o of prefObservers) {
+    for (const id of prefObserverIDs) {
       try {
-        Zotero.Prefs.unregisterObserver(o.key, o.handler, true);
+        Zotero.Prefs.unregisterObserver(id);
       } catch (_) {}
     }
     for (const fn of addon.data.lineCleanups) {
