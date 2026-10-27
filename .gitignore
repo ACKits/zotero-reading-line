@@ -1,0 +1,27 @@
+# dot files
+.DS_Store
+
+# Node.js
+node_modules
+pnpm-lock.yaml
+yarn.lock
+
+# TSC
+tsconfig.tsbuildinfo
+
+# Scaffold
+.env
+.scaffold
+build
+logs
+
+# Build output
+*.xpi
+*.zip
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+Thumbs.db

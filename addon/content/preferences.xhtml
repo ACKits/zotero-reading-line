@@ -1,0 +1,75 @@
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      xmlns:html="http://www.w3.org/1999/xhtml">
+  <groupbox>
+    <label><html:h2>Reading Line 设置</html:h2></label>
+
+    <hbox align="center" style="margin-bottom: 12px;">
+      <label value="线型" width="110"/>
+      <menulist preference="extensions.zotero.readingline.lineStyle"
+                style="flex: 1; max-width: 300px;">
+        <menupopup>
+          <menuitem label="直线" value="line"/>
+          <menuitem label="波浪" value="wave"/>
+          <menuitem label="虚线" value="dashed"/>
+        </menupopup>
+      </menulist>
+    </hbox>
+
+    <hbox align="center" style="margin-bottom: 12px;">
+      <label value="颜色" width="110"/>
+      <menulist preference="extensions.zotero.readingline.lineColor"
+                style="flex: 1; max-width: 300px;">
+        <menupopup>
+          <menuitem label="玫瑰红 #e11d48" value="#e11d48"/>
+          <menuitem label="宝石蓝 #2563eb" value="#2563eb"/>
+          <menuitem label="翡翠绿 #059669" value="#059669"/>
+          <menuitem label="紫罗兰 #7c3aed" value="#7c3aed"/>
+          <menuitem label="活力橙 #ea580c" value="#ea580c"/>
+          <menuitem label="深空灰 #334155" value="#334155"/>
+          <menuitem label="纯黑 #000000" value="#000000"/>
+        </menupopup>
+      </menulist>
+    </hbox>
+
+    <hbox align="center" style="margin-bottom: 12px;">
+      <label value="线宽" width="110"/>
+      <menulist preference="extensions.zotero.readingline.lineWidth"
+                style="flex: 1; max-width: 300px;">
+        <menupopup>
+          <menuitem label="1 px（极细）" value="1"/>
+          <menuitem label="2 px（标准）" value="2"/>
+          <menuitem label="3 px（加粗）" value="3"/>
+          <menuitem label="4 px（醒目）" value="4"/>
+          <menuitem label="5 px（极粗）" value="5"/>
+        </menupopup>
+      </menulist>
+    </hbox>
+
+    <hbox align="center" style="margin-bottom: 12px;">
+      <label value="显示效果" width="110"/>
+      <menulist preference="extensions.zotero.readingline.lineAnimation"
+                style="flex: 1; max-width: 300px;">
+        <menupopup>
+          <menuitem label="直接出现" value="instant"/>
+          <menuitem label="淡入淡出" value="fade"/>
+          <menuitem label="缩放淡入" value="fade-slide"/>
+        </menupopup>
+      </menulist>
+    </hbox>
+
+    <hbox align="center">
+      <label value="静止延迟" width="110"/>
+      <menulist preference="extensions.zotero.readingline.lineDelay"
+                style="flex: 1; max-width: 300px;">
+        <menupopup>
+          <menuitem label="立刻（100 ms）" value="100"/>
+          <menuitem label="快速（200 ms）" value="200"/>
+          <menuitem label="标准（400 ms）" value="400"/>
+          <menuitem label="慢速（600 ms）" value="600"/>
+          <menuitem label="沉稳（800 ms）" value="800"/>
+          <menuitem label="缓慢（1000 ms）" value="1000"/>
+        </menupopup>
+      </menulist>
+    </hbox>
+  </groupbox>
+</vbox>
