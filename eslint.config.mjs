@@ -10,6 +10,7 @@ export default zotero({
         // We disable this rule here because the template
         // contains some unused examples and variables
         "@typescript-eslint/no-unused-vars": "off",
+        "no-empty": ["error", { allowEmptyCatch: true }],
       },
     },
   ],
