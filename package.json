@@ -12,13 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pf-z/zotero-reading-line.git"
+    "url": "git+https://github.com/ACKits/zotero-reading-line.git"
   },
-  "author": "pf-z",
+  "author": "ACKits",
   "bugs": {
-    "url": "https://github.com/pf-z/zotero-reading-line/issues"
+    "url": "https://github.com/ACKits/zotero-reading-line/issues"
   },
-  "homepage": "https://github.com/pf-z/zotero-reading-line#readme",
+  "homepage": "https://github.com/ACKits/zotero-reading-line#readme",
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "start": "zotero-plugin serve",
